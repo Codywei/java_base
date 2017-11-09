@@ -1,5 +1,4 @@
-
-    import java.util.*;
+import java.util.*;
 
     /*
      * @desc Hashtable的测试程序。
