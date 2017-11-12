@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 /**
- * 重写hashcode和equals方法
+ * 重写hashcode和equals方法用于比较
  * */
 
 class People{

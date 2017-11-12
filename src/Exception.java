@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Exception 块需要注意的几个点
+ * Exception 块需要注意的几个地方
  * */
 public class Exception {
     public static void main(String[] args) {

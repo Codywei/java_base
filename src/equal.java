@@ -1,5 +1,5 @@
 /**
- * "=="和equal的几个小测试,String intern的测试
+ * "=="和equal的几个测试程序,String intern的测试
  * */
 public class equal {
     public static void main(String[] args) {
