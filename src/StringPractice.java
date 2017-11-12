@@ -1,3 +1,9 @@
+/**
+ String,StringBuffer,StringBuilder测试
+ 具体区别在java-study中
+ * */
+
+
 public class StringPractice {
     private static int time = 50000;
     public static void main(String[] args) {
@@ -39,7 +45,7 @@ public class StringPractice {
         System.out.println("操作"+sb.getClass().getName()+"类型使用的时间为："+(over-begin)+"毫秒");
     }
 
-    public static void test1String () {
+    public static void test1String () {//"I"+"love"+"java"在编译期间会被优化成"ilovejava"
         long begin = System.currentTimeMillis();
         for(int i=0; i<time; i++){
             String s = "I"+"love"+"java";
