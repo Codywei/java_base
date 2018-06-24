@@ -1,4 +1,5 @@
 /**
+ == 和equal 的区别 以及 String intern
  * "=="和equal的几个测试程序,String intern的测试
  * */
 public class equal {
