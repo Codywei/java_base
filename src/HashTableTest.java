@@ -1,9 +1,8 @@
 import java.util.*;
 
     /**
-     * Hashtable的测试程序。
-     *
-     *
+     Hashtable的测试程序。
+
      */
     public class HashTableTest {
         public static void main(String[] args) {
