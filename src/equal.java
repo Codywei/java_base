@@ -8,22 +8,27 @@ public class equal {
         int n=3;
         int m=3;
 
-        System.out.println(n==m);//8种基本数据类型的变量，变量直接存储的是“值”，因此在用关系操作符==来进行比较时，比较的就是 “值” 本身
+        //8种基本数据类型的变量，变量直接存储的是“值”，因此在用关系操作符==来进行比较时，比较的就是 “值” 本身
+        System.out.println(n==m);
 
-        String str = new String("hello");//引用类型的变量。比如上面的str1就是引用类型的变量，引用类型的变量存储的并不是 “值”本身，而是于其关联的对象在内存中的地址。
+        //引用类型的变量。比如上面的str1就是引用类型的变量，引用类型的变量存储的并不是 “值”本身，而是于其关联的对象在内存中的地址。
+        String str = new String("hello");
         String str1 = new String("hello");
         String str2 = new String("hello");
 
-        System.out.println(str1==str2);//分别指向的是不同的对象，也就是说它们实际存储的内存地址不同
+        //分别指向的是不同的对象，也就是说它们实际存储的内存地址不同
+        System.out.println(str1==str2);
 
         str1 = str;
         str2 = str;
-        System.out.println(str1==str2);//分别指向的是相同的对象，也就是说它们实际存储的内存地址相同
+        //分别指向的是相同的对象，也就是说它们实际存储的内存地址相同
+        System.out.println(str1==str2);
 
         String str3 = new String("hello");
         String str4 = new String("hello");
 
-        System.out.println(str1.equals(str2));//在Object类中，equals方法是用来比较两个对象的引用是否相等，即是否指向同一个对象,但String类对equals方法进行了重写，用来比较指向的字符串对象所存储的字符串是否相等。
+        //在Object类中，equals方法是用来比较两个对象的引用是否相等，即是否指向同一个对象,但String类对equals方法进行了重写，用来比较指向的字符串对象所存储的字符串是否相等。
+        System.out.println(str1.equals(str2));
         /**
          * 　总结来说：
 
@@ -40,7 +45,7 @@ public class equal {
 
 
 
-         //string intern 方法，java1.6之后运行时常量池放到堆中
+        //string intern 方法，java1.6之后运行时常量池放到堆中
         //当调用 intern 方法时，如果池已经包含一个等于此 String 对象的字符串（该对象由 equals(Object) 方法确定），则返回池中的字符串。否则，将此 String 对象添加到池中，并且返回此 String 对象的引用。
         String str6 = "SEUCalvin";
         String str5 = new String("SEU")+ new String("Calvin");
