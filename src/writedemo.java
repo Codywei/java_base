@@ -3,6 +3,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
 /**
+ * 字符流，字节流
  * 字符流操作，中间加了两个static类测试
  * 字节流在操作时本身不会用到缓冲区（内存），是文件本身直接操作的，而字符流在操作时使用了缓冲区，通过缓冲区再操作文件
  * static成员变量的初始化顺序按照定义的顺序进行初始化。
