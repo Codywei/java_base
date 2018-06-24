@@ -14,7 +14,9 @@ public class StringPractice {
         test2String();
     }
 
-
+/**
+ “对String对象的任何改变都不影响到原对象，相关的任何change操作都会生成新的对象”。
+ * */
     public static void testString () {
         String s="";
         long begin = System.currentTimeMillis();
@@ -45,7 +47,8 @@ public class StringPractice {
         System.out.println("操作"+sb.getClass().getName()+"类型使用的时间为："+(over-begin)+"毫秒");
     }
 
-    public static void test1String () {//"I"+"love"+"java"在编译期间会被优化成"ilovejava"
+    public static void test1String () {
+        //"I"+"love"+"java"在编译期间会被优化成"ilovejava"
         long begin = System.currentTimeMillis();
         for(int i=0; i<time; i++){
             String s = "I"+"love"+"java";
