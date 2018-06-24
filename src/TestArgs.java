@@ -1,4 +1,4 @@
-import java.io.*;import java.io.BufferedReader;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;public class TestArgs {
     /**
@@ -19,7 +19,8 @@ import java.io.InputStreamReader;public class TestArgs {
             // readLine()方法运行时若发生I/O错误，将抛出IOException异常
             while (s != null) {
                 System.out.println("Read: " + s);
-                System.out.println(s.length()==0);//直接回车 s.length为0，但是str不为null
+                //直接回车 s.length为0，但是str不为null
+                System.out.println(s.length()==0);
                 s = in.readLine();
 
 
