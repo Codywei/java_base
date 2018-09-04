@@ -10,7 +10,7 @@ public class equal {
         int m=3;
 
         //8种基本数据类型的变量，变量直接存储的是“值”，因此在用关系操作符==来进行比较时，比较的就是 “值” 本身
-        System.out.println(n==m);
+        System.out.println("1 :"+(n==m));
 
         //引用类型的变量。比如上面的str1就是引用类型的变量，引用类型的变量存储的并不是 “值”本身，而是于其关联的对象在内存中的地址。
         String str = new String("hello");
@@ -18,18 +18,18 @@ public class equal {
         String str2 = new String("hello");
 
         //分别指向的是不同的对象，也就是说它们实际存储的内存地址不同
-        System.out.println(str1==str2);
+        System.out.println("2 :"+(str1==str2));
 
         str1 = str;
         str2 = str;
         //分别指向的是相同的对象，也就是说它们实际存储的内存地址相同
-        System.out.println(str1==str2);
+        System.out.println("3 :"+(str1==str2));
 
         String str3 = new String("hello");
         String str4 = new String("hello");
 
         //在Object类中，equals方法是用来比较两个对象的引用是否相等，即是否指向同一个对象,但String类对equals方法进行了重写，用来比较指向的字符串对象所存储的字符串是否相等。
-        System.out.println(str1.equals(str2));
+        System.out.println("4 :"+(str1.equals(str2)));
         /**
          * 　总结来说：
 
@@ -50,10 +50,10 @@ public class equal {
         //当调用 intern 方法时，如果池已经包含一个等于此 String 对象的字符串（该对象由 equals(Object) 方法确定），则返回池中的字符串。否则，将此 String 对象添加到池中，并且返回此 String 对象的引用。
         String str6 = "SEUCalvin";
         String str5 = new String("SEU")+ new String("Calvin");
-        System.out.println(str5.intern() == str5);
-        System.out.println(str5.intern() == str6);
-        System.out.println(str5 == "SEUCalvin");
-        System.out.println("SEUCalvin" == str6);
+        System.out.println("5 :"+(str5.intern() == str5));
+        System.out.println("6 :"+(str5.intern() == str6));
+        System.out.println("7 :"+(str5 == "SEUCalvin"));
+        System.out.println("8 :"+("SEUCalvin" == str6));
 
 
         String a = new String("ab");
@@ -63,11 +63,11 @@ public class equal {
         String e = "b";
         String f = "a" + e;
 
-        System.out.println(b.intern() == a);
-        System.out.println(b.intern() == c);
-        System.out.println(b.intern() == d);
-        System.out.println(b.intern() == f);
-        System.out.println(b.intern() == a.intern());
+        System.out.println("9 :"+(b.intern() == a));
+        System.out.println("10 :"+(b.intern() == c));
+        System.out.println("11 :"+(b.intern() == d));
+        System.out.println("12 :"+(b.intern() == f));
+        System.out.println("13 :"+(b.intern() == a.intern()));
         /**
          * 由运行结果可以看出来，b.intern() == a和b.intern() == c可知，采用new 创建的字符串对象不进入字符串池，
          * 并且通过b.intern() == d和b.intern() == f可知，字符串相加的时候，都是静态字符串的结果会添加到字符串池，
