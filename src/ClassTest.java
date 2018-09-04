@@ -14,10 +14,11 @@ public class ClassTest {
     public static void main(String[] args) throws ClassNotFoundException {
 
         new Meal();
-        //向上转型（父类的引用指向子类对象）
+//      向上转型（父类的引用指向子类对象）
         Bread bread=new BlackBread();
         System.out.println(bread.name);
         bread.eat();
+
 
     }
 }
@@ -51,7 +52,7 @@ class Bread {
     }
 
     public String name="Bread";
-    private int s;
+    private int s=0;
     public void eat(){
         System.out.println("eating bread");
     }
@@ -84,13 +85,17 @@ class  BlackBread extends Bread{
         super.eat();
         //父类的构造器调用以及初始化过程一定在子类的前面
         System.out.println(super.name);
+
         System.out.println("BlackBread");
     }
 
     /**
-     覆盖只针对非静态方法（终态方法不能被继承，所以就存在覆盖一说了），而隐藏是针对成员变量和静态方法的。这2者之间的区别是：覆盖受RTTI（Runtime type  identification）约束的，而隐藏却不受该约束。
+     覆盖只针对非静态方法（终态方法不能被继承，所以就不存在覆盖一说了），而隐藏是针对成员变量和静态方法的。这两者之间的区别是：覆盖受RTTI（Runtime type  identification）约束的，而隐藏却不受该约束。
 
-     也就是说只有覆盖方法才会进行动态绑定，而隐藏是不会发生动态绑定的。在Java中，除了static方法和final方法，其他所有的方法都是动态绑定。因此，就会出现上面的输出结果。
+     也就是说只有覆盖方法才会进行动态绑定，而隐藏是不会发生动态绑定的。在Java中，除了static方法和final方法，其他所有的方法都是动态绑定。
+
+     隐藏：子类继承父类后，父类的属性和静态方法并没有被子类抹去，通过相应的引用可以访问的到。但是在子类中不能显示地看到，这种情况就称为隐藏。
+     覆盖：子类继承父类后，父类的非静态方法被子类重写后覆盖上去，通过相应的引用也访问不到了（除非创建父类的对象来调用）。这种情况称为覆盖。
      */
 
     @Override
