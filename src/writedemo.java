@@ -31,8 +31,7 @@ public class writedemo{
 // 将内容输出，如果想在不关闭时也可以将字符流的内容全部输出，则可以使用Writer类中的flush()方法完成。
             out.flush();
             // 第4步：关闭输出流
-            // out.close();
-         //此时没有关闭
+            // out.close();// 此时没有关闭
         }catch (IOException e){
                e.printStackTrace();
         }
