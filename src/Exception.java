@@ -26,7 +26,7 @@ public class Exception {
         try {
             FileInputStream inputStream = new FileInputStream("d:/a.txt");
             int ch = inputStream.read();
-            System.out.println("aaa");
+            System.out.println("异常所在位置之后的代码不被执行");
             return "step1";
         } catch (FileNotFoundException e) {
             System.out.println("file not found");
