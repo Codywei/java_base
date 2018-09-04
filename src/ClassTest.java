@@ -5,7 +5,7 @@
 
  也就是说类中的变量会在任何方法（包括构造器）调用之前得到初始化，即使变量散布于方法定义之间。
 
- 如果类中有static语句块，则会执行static语句块。static成员变量和static语句块的执行顺序同代码中的顺序一致
+ 如果类中有static语句块，则先会执行static语句块。static成员变量和static语句块的执行顺序同代码中的顺序一致
 
  注意，所有的构造器默认为static的。
  * */
@@ -102,7 +102,6 @@ class  BlackBread extends Bread{
     public void eat(){
         System.out.println("eating blackbread");
     }
-
 
 
 
