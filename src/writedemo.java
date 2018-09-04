@@ -13,10 +13,11 @@ public class writedemo{
     static{
         System.out.println("hello");
     }
-    public static void main(String[] args) throws IOException { // 异常抛出，  不处理
+    public static void main(String[] args) throws IOException {
         // 第1步：使用File类找到一个文件
         try {
-            File f = new File("test.txt");// 声明File 对象
+            // 声明File 对象
+            File f = new File("test.txt");
             // 第2步：通过子类实例化父类对象
             Writer out = null;
 // 准备好一个输出的对象   
@@ -27,11 +28,11 @@ public class writedemo{
 // 准备一个字符串   
             out.write(str);
 
-// 将内容输出
-            out.flush();//如果想在不关闭时也可以将字符流的内容全部输出，则可以使用Writer类中的flush()方法完成。
+// 将内容输出，如果想在不关闭时也可以将字符流的内容全部输出，则可以使用Writer类中的flush()方法完成。
+            out.flush();
             // 第4步：关闭输出流
             // out.close();
-// 此时没有关闭   
+         //此时没有关闭
         }catch (IOException e){
                e.printStackTrace();
         }
